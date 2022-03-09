@@ -1,0 +1,113 @@
+﻿@page
+@model SistemaWeb.Pages.Sucursales.DetalleSucursal
+
+@{
+    ViewData["Title"] = "Detalle Sucursal";
+}
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <title>Detalle Sucursal</title>
+</head>
+<body>
+<div class="container" >
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Sucursal @Model.Sucursal.Nombre</h2>
+        </div>
+        <div class="col-6 text-end">
+
+        </div>
+    </div>
+
+    <br/><br/>
+
+    
+        <h4>Detalles:</h4>
+        <table class="table" style="width: 50%">
+            <thead>
+            <tr>
+                <th style="width: 3%"></th>
+                <th style="width: 7%"></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>
+                    <label asp-for="Sucursal.Nombre"></label>
+                </td>
+                <td>
+                    <label>@Model.Sucursal.Nombre</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="Sucursal.Telefono"></label>
+                </td>
+                <td>
+                    <label>@Model.Sucursal.Telefono</label>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    
+
+    
+        <h4>Dirección:</h4>
+        <table class="table" style="width: 50%">
+            <thead>
+            <tr>
+                <th style="width: 3%"></th>
+                <th style="width: 7%"></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>
+                    <label asp-for="Direccion.Calle"></label>
+                </td>
+                <td>
+                    <label>@Model.Direccion.Calle</label>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <label asp-for="Direccion.Departamento"></label>
+                </td>
+                <td>
+                    <label>@Model.Direccion.Departamento</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="Direccion.Ciudad"></label>
+                </td>
+                <td>
+                    <label>@Model.Direccion.Ciudad</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="Direccion.Pais"></label>
+                </td>
+                <td>
+                    <label>@Model.Direccion.Pais</label>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    
+    <br/>
+    <a asp-page="EditarSucursal" class="btn btn-primary">
+        <i class="bi bi-pencil-square"></i> &nbsp;Editar Información
+    </a>
+    <a asp-page="IndexSucursal" class="btn btn-secondary" style="width: 150px">Volver</a>
+</div>
+</body>
+</html>

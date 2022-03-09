@@ -1,0 +1,109 @@
+﻿@page
+@model SistemaWeb.Pages.Horarios.EliminarHorario
+
+@{
+    ViewData["Title"] = "Editar Horario";
+}
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <title>Editar Horario</title>
+</head>
+<body>
+<div>
+    <form method="post">
+        <input hidden asp-for="Horario.HorarioId"/>
+        <div class="border p-3 mt-4">
+            <div class="row pb-2">
+                <h2 class="text-primary pl-3">Eliminar Horario</h2>
+                <hr/>
+            </div>
+
+            <table class="table table-borderless" style="width: 55%">
+                <thead>
+                <tr>
+                    <th style="width: 4%"></th>
+                    <th style="width: 6%"></th>
+                    <th style="width: 4%"></th>
+                    <th style="width: 6%"></th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>
+                        <label asp-for="Horario.DiaInicio"></label>
+                    </td>
+                    <td>
+                        <select disabled asp-for="Horario.DiaInicio" class="form-select">
+                            <option>Lunes</option>
+                            <option>Martes</option>
+                            <option>Miercoles</option>
+                            <option>Jueves</option>
+                            <option>Viernes</option>
+                            <option>Sabado</option>
+                            <option>Domingo</option>
+                        </select>
+                        <div class="invalid-feedback" style="display:block;">
+                            <span asp-validation-for="Horario.DiaInicio" class="text-danger"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <label asp-for="Horario.DiaTermino"></label>
+                    </td>
+                    <td>
+                        <select disabled asp-for="Horario.DiaTermino" class="form-select">
+                            <option>Lunes</option>
+                            <option>Martes</option>
+                            <option>Miercoles</option>
+                            <option>Jueves</option>
+                            <option>Viernes</option>
+                            <option>Sabado</option>
+                            <option>Domingo</option>
+                        </select>
+                        <div class="invalid-feedback" style="display:block;">
+                            <span asp-validation-for="Horario.DiaTermino" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label asp-for="Horario.HoraInicio"></label>
+                    </td>
+                    <td>
+                        <input readonly asp-for="Horario.HoraInicio" type="time" class="form-control"/>
+                        <div class="invalid-feedback" style="display:block;">
+                            <span asp-validation-for="Horario.HoraInicio" class="text-danger"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <label asp-for="Horario.HoraTermino"></label>
+                    </td>
+                    <td>
+                        <input readonly asp-for="Horario.HoraTermino" type="time" class="form-control"/>
+                        <div class="invalid-feedback" style="display:block;">
+                            <span asp-validation-for="Horario.HoraTermino" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <button type="submit" class="btn btn-primary" style="width: 150px;">Eliminar</button>
+            <a asp-page="IndexHorario" class="btn btn-secondary" style="width: 150px">Volver</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+
+@* Validacion desde cliente *@
+
+@section Scripts
+{
+    @{
+        <partial name="Shared/_ValidationScriptsPartial"/>
+    }
+}

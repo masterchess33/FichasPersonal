@@ -1,0 +1,61 @@
+﻿@page
+@model SistemaWeb.Pages.Cargos.EditarCargo
+
+@{
+    ViewData["Title"] = "Actualizar Cargo";
+}
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <title>Actualizar Cargo</title>
+</head>
+<body>
+<div>
+    <form method="post">
+        <input hidden asp-for="Cargo.CargoId"/>
+        <div class="border p-3 mt-4">
+            <div class="row pb-2">
+                <h2 class="text-primary pl-3"> Editar Cargo</h2>
+                <hr/>
+            </div>
+            <table class="table table-borderless">
+                <thead>
+                <tr>
+                    <th style="width: 1%"></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <label class="form-label" asp-for="Cargo.Nombre"></label>
+                    </td>
+                    <td>
+                        <input asp-for="Cargo.Nombre" class="form-control"/>
+                        <div class="invalid-feedback" style="display:block;">
+                            <span asp-validation-for="Cargo.Nombre" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <button type="submit" class="btn btn-primary" style="width: 150px;">Actualizar</button>
+            <a asp-page="IndexCargo" class="btn btn-secondary" style="width: 150px">Volver</a>
+        </div>
+        <input hidden asp-for="Cargo.Empleados"/>
+
+    </form>
+</div>
+</body>
+</html>
+
+@* Validacion desde cliente *@
+
+@section Scripts
+{
+    @{
+        <partial name="Shared/_ValidationScriptsPartial"/>
+    }
+}

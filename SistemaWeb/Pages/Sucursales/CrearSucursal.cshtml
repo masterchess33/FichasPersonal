@@ -1,0 +1,90 @@
+﻿@page
+@model SistemaWeb.Pages.Sucursales.CrearSucursal
+
+@{
+    ViewData["Title"] = "Crear Sucursal";
+}
+
+@section Head
+{
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css"/>
+}
+
+<div>
+    <form method="post">
+        <div class="border p-3 mt-4">
+            <div class="row pb-2">
+                <h2 class="text-primary pl-3"> Crear Sucursal</h2>
+                <hr/>
+            </div>
+            <table class="table table-borderless">
+                <thead>
+                <tr>
+                    <th style="width: 1%"></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <label class="form-label" asp-for="Sucursal.Nombre"></label>
+                    </td>
+                    <td>
+                        <input asp-for="Sucursal.Nombre" class="form-control"/>
+                        <div class="invalid-feedback" style="display:block;">
+                            <span asp-validation-for="Sucursal.Nombre" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="form-label" asp-for="Sucursal.Telefono"></label>
+                    </td>
+                    <td>
+                        <input asp-for="Sucursal.Telefono" class="form-control"/>
+                        <div class="invalid-feedback" style="display:block;">
+                            <span asp-validation-for="Sucursal.Telefono" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="form-label" asp-for="Sucursal.IdDireccion"></label>
+                    </td>
+                    <td>
+                        <select autocomplete="off" asp-for="Sucursal.IdDireccion" asp-items="Model.Direcciones" class="form-control" required>
+                            <option selected disabled value="">Seleccione una dirección</option>
+                        </select>
+                        <div class="invalid-feedback" style="display:block;">
+                            <span asp-validation-for="Sucursal.IdDireccion" class="text-danger"></span>
+                        </div>
+
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <button type="submit" class="btn btn-primary" style="width: 150px;">Crear</button>
+            <a asp-page="IndexSucursal" class="btn btn-secondary" style="width: 150px">Volver</a>
+        </div>
+    </form>
+
+</div>
+
+<script>
+                                
+    $(document).ready(function () {
+            $('select').selectize({
+                sortField: 'text'
+            });
+        });
+</script>
+
+@section Scripts
+{
+
+    @{
+        <partial name="Shared/_ValidationScriptsPartial"/>
+    }
+}

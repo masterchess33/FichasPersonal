@@ -1,0 +1,87 @@
+﻿@page
+@model SistemaWeb.Pages.Direcciones.EditarDireccion
+
+@{
+    ViewData["Title"] = "Actualizar Dirección";
+}
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <title>Actualizar Dirección</title>
+</head>
+<body>
+<div class="border p-3 mt-4">
+    <div class="row pb-2">
+        <h2 class="text-primary pl-3"> Actualizar Dirección</h2>
+        <hr/>
+    </div>
+    <form method="post">
+        <input hidden asp-for="Direccion.DireccionId"/>
+        <table class="table table-borderless">
+            <tr>
+                <th style="width: 3%"></th>
+                <th style="width: 30%"></th>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="Direccion.Calle"></label>
+                </td>
+                <td>
+                    <input asp-for="Direccion.Calle" class="form-control"/>
+                    <div class="invalid-feedback" style="display:block;">
+                        <span asp-validation-for="Direccion.Calle" class="text-danger"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="Direccion.Departamento"></label>
+                </td>
+                <td>
+                    <input asp-for="Direccion.Departamento" class="form-control"/>
+                    <div class="invalid-feedback" style="display:block;">
+                        <span asp-validation-for="Direccion.Departamento" class="text-danger"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="Direccion.Pais"></label>
+                </td>
+                <td>
+                    <input autocomplete="country-name" asp-for="Direccion.Pais" class="form-control"/>
+
+                    <div class="invalid-feedback" style="display:block;">
+                        <span asp-validation-for="Direccion.Pais" class="text-danger"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="Direccion.Ciudad"></label>
+                </td>
+                <td>
+                    <input asp-for="Direccion.Ciudad" class="form-control"/>
+
+                    <div class="invalid-feedback" style="display:block;">
+                        <span asp-validation-for="Direccion.Ciudad" class="text-danger"></span>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+        <button type="submit" class="btn btn-primary" style="width: 150px;">Actualizar</button>
+        <a asp-page="IndexDireccion" class="btn btn-secondary" style="width: 150px">Volver</a>
+    </form>
+</div>
+</body>
+</html>
+
+@section Scripts
+{
+    @{
+        <partial name="Shared/_ValidationScriptsPartial"/>
+    }
+}

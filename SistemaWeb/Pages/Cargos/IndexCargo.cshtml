@@ -1,0 +1,58 @@
+﻿@page
+@model SistemaWeb.Pages.Cargos.IndexCargo
+
+@{
+    ViewData["Title"] = "Cargos";
+}
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <title>Cargos</title>
+</head>
+<body>
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Cargos Registrados</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-page="CrearCargo" class="btn btn-primary">
+                <i class="bi bi-plus-square"></i> &nbsp;Crear Cargo
+            </a>
+        </div>
+    </div>
+    
+    <br/><br/>
+    
+    <table class="table table-bordered table-striped" style="width: 80%">
+        <thead>
+        <tr>
+            <th>Nombre Cargo</th>
+            <th style="width: 30%"></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var obj in Model.Cargos)
+        {
+            <tr>
+                <td style="width: 50%">@obj.Nombre</td>
+                <td>
+                    <div class="w-100 btn-group" role="group">
+                    <a asp-page="EditarCargo" asp-route-id="@obj.CargoId" class="btn btn-primary mx-2">
+                        <i class="bi bi-pencil-square"></i>
+                    </a>
+                    <a asp-page="EliminarCargo" asp-route-id="@obj.CargoId" class="btn btn-danger mx-2">
+                        <i class="bi bi-trash-fill"></i>
+                    </a>
+                    </div>
+                </td>
+            </tr>
+        }
+        
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

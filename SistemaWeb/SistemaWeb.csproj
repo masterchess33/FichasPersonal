@@ -1,0 +1,194 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.1">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Pages\Departamentos" />
+      <Folder Include="Pages\Empleados" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\.versions" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\accordion.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\accordion.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\accordion.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\accordion.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\ad.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\ad.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\api.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\api.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\breadcrumb.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\breadcrumb.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\button.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\button.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\card.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\card.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\checkbox.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\checkbox.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\checkbox.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\checkbox.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\colorize.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\colorize.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\comment.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\comment.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\container.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\container.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\dimmer.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\dimmer.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\dimmer.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\dimmer.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\divider.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\divider.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\dropdown.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\dropdown.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\dropdown.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\dropdown.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\embed.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\embed.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\embed.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\embed.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\feed.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\feed.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\flag.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\flag.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\form.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\form.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\form.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\form.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\grid.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\grid.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\header.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\header.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\icon.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\icon.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\image.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\image.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\input.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\input.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\item.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\item.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\label.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\label.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\list.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\list.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\loader.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\loader.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\menu.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\menu.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\message.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\message.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\modal.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\modal.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\modal.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\modal.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\nag.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\nag.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\nag.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\nag.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\placeholder.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\placeholder.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\popup.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\popup.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\popup.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\popup.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\progress.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\progress.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\progress.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\progress.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\rail.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\rail.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\rating.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\rating.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\rating.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\rating.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\reset.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\reset.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\reveal.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\reveal.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\search.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\search.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\search.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\search.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\segment.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\segment.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\shape.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\shape.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\shape.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\shape.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\sidebar.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\sidebar.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\sidebar.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\sidebar.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\site.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\site.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\site.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\site.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\state.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\state.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\statistic.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\statistic.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\step.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\step.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\sticky.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\sticky.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\sticky.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\sticky.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\tab.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\tab.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\tab.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\tab.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\table.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\table.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\transition.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\transition.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\transition.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\transition.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\video.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\video.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\video.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\video.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\visibility.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\visibility.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\visit.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\components\visit.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\LICENSE" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\package.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\package.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\README.md" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\semantic.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\semantic.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\semantic.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\semantic.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\themes\default\assets\fonts\brand-icons.eot" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\themes\default\assets\fonts\brand-icons.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\themes\default\assets\fonts\brand-icons.ttf" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\themes\default\assets\fonts\brand-icons.woff" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\themes\default\assets\fonts\brand-icons.woff2" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\themes\default\assets\fonts\icons.eot" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\themes\default\assets\fonts\icons.otf" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\themes\default\assets\fonts\icons.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\themes\default\assets\fonts\icons.ttf" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\themes\default\assets\fonts\icons.woff" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\themes\default\assets\fonts\icons.woff2" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\themes\default\assets\fonts\outline-icons.eot" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\themes\default\assets\fonts\outline-icons.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\themes\default\assets\fonts\outline-icons.ttf" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\themes\default\assets\fonts\outline-icons.woff" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\themes\default\assets\fonts\outline-icons.woff2" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\Semantic\themes\default\assets\images\flags.png" />
+    </ItemGroup>
+
+</Project>
